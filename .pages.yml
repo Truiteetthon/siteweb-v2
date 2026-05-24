@@ -1,0 +1,43 @@
+media:
+  input: Photos
+  output: /photos
+
+content:
+  - name: projets
+    label: Projets
+    type: collection
+    path: projets
+    fields:
+      - name: Titre
+        label: Titre
+        type: string
+      - name: Titre-an
+        label: Titre-an
+        type: string
+      - name: Description
+        label: Description
+        type: rich-text
+      - name: Description-an
+        label: Description-an
+        type: rich-text
+      - name: Année
+        label: Année
+        type: string
+      - name: Lieu
+        label: Lieu
+        type: string
+      - name: Photographe
+        label: Photographe
+        type: string
+      - name: Photos
+        label: Photos
+        type: object
+        list: true
+        fields:
+          - name: Photo
+            label: Photo
+            type: image
+            list: true
+          - name: Carrousel
+            type: boolean
+            default: false
