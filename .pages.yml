@@ -41,7 +41,6 @@ content:
           - name: Photo
             label: Photo
             type: image
-            list: true
           - name: Carrousel
             type: boolean
             default: false
