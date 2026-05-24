@@ -18,6 +18,18 @@ content:
         type: select
         options:
           values: [Architecture, Installations, Contact]
+      - name: sections
+        label: Sections
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: hero
+          component: hero
+          - name: text
+          fields:
+            - name: body
+            type: rich-text
       - name: Description
         label: Description
         type: rich-text
