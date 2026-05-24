@@ -44,3 +44,45 @@ content:
           - name: Carrousel
             type: boolean
             default: false
+
+  - name: contact
+    label: Contact
+    type: collection
+    path: Contact
+    fields:
+      - name: Titre
+        label: Titre
+        type: string
+      - name: Titre-anglais
+        label: Titre-anglais
+        type: string
+      - name: Categorie
+        type: select
+        options:
+          values: [Architecture, Installations]
+      - name: Description
+        label: Description
+        type: rich-text
+      - name: Description-anglais
+        label: Description-anglais
+        type: rich-text
+      - name: Annee
+        label: Annee
+        type: string
+      - name: Lieu
+        label: Lieu
+        type: string
+      - name: Photographe
+        label: Photographe
+        type: string
+      - name: Photos
+        label: Photos
+        type: object
+        list: true
+        fields:
+          - name: Photo
+            label: Photo
+            type: image
+          - name: Carrousel
+            type: boolean
+            default: false
