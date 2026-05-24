@@ -8,16 +8,16 @@ content:
     type: collection
     path: projets
     fields:
-      - name: Categorie
-        type: select
-        options:
-        values: [Architecture, Installations, Contact]
       - name: Titre
         label: Titre
         type: string
       - name: Titre-anglais
         label: Titre-anglais
         type: string
+      - name: Categorie
+        type: select
+        options:
+          values: [Architecture, Installations, Contact]
       - name: Description
         label: Description
         type: rich-text
