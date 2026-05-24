@@ -11,7 +11,7 @@ content:
       - name: Categorie
         type: select
         options:
-        values: [Architecture, Instalations, A-propos]
+        values: [Architecture, Installations, Contact]
       - name: Titre
         label: Titre
         type: string
