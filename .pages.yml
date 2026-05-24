@@ -47,7 +47,7 @@ content:
 
   - name: contact
     label: Contact
-    type: collection
+    type: file
     path: Contact
     fields:
       - name: Titre
@@ -56,33 +56,22 @@ content:
       - name: Titre-anglais
         label: Titre-anglais
         type: string
-      - name: Categorie
-        type: select
-        options:
-          values: [Architecture, Installations]
       - name: Description
         label: Description
         type: rich-text
       - name: Description-anglais
         label: Description-anglais
         type: rich-text
-      - name: Annee
-        label: Annee
+      - name: Courriel
+        label: Courriel
         type: string
-      - name: Lieu
-        label: Lieu
+      - name: Telephone
+        label: Telephone
         type: string
       - name: Photographe
         label: Photographe
         type: string
       - name: Photos
         label: Photos
-        type: object
-        list: true
-        fields:
-          - name: Photo
-            label: Photo
-            type: image
-          - name: Carrousel
-            type: boolean
-            default: false
+        type: image
+        
