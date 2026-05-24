@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Nicolas Chaudier architecte</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link
+            rel="shortcut icon"
+            type="image/jpg"
+            href="/Photos/En Eaux Vives/photo-9.jpg"
+        />
+    </head>
+  <body>
+      <header class="header" id="header">
+          <div style="font-weight: 450">Nicolas Chaudier architecte</div>
+          <div class="space"></div>
+          <div class="menu">
+              {{ for categorie of search.values("categorie").sort() }}
+              <div class="categorie" id={{ categorie }}>{{ categorie }}</div>
+              {{ /for }}
+          </div>
+          <div class="space"></div>
+          <div class="space"></div>
+          <div>+1 (514) 922-5056</div>
+          <div>
+              <a class="mail" href="mailto:nchaudi3r@gmail.com">courriel</a>
+          </div>
+      </header>
+  </body>
+</html>
