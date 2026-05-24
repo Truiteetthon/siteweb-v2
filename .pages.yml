@@ -25,11 +25,11 @@ content:
         blockKey: type
         blocks:
           - name: hero
-          component: hero
+            component: hero
           - name: text
-          fields:
+            fields:
             - name: body
-            type: rich-text
+              type: rich-text
       - name: Description
         label: Description
         type: rich-text
