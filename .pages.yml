@@ -18,6 +18,15 @@ content:
         type: select
         options:
           values: [Architecture, Installations, Contact]
+      - name: sections
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title} ({index})"
+        fields:
+          - name: title
+            type: string
       - name: Description
         label: Description
         type: rich-text
