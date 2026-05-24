@@ -12,15 +12,15 @@ content:
         label: Titre
         type: string
       - name: Titre-an
-        label: Titre-an
+        label: Titre anglais
         type: string
       - name: Description
         label: Description
         type: rich-text
       - name: Description-an
-        label: Description-an
+        label: Description anglais
         type: rich-text
-      - name: Année
+      - name: Annee
         label: Année
         type: string
       - name: Lieu
