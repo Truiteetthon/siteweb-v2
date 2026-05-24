@@ -8,6 +8,10 @@ content:
     type: collection
     path: projets
     fields:
+      - name: Categorie
+        type: select
+        options:
+        values: [Architecture, Instalations, A-propos]
       - name: Titre
         label: Titre
         type: string
