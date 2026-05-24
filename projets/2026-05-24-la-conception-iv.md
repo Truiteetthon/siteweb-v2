@@ -27,4 +27,11 @@ Description-anglais: La Conception IV is a minimalist cabin located in La
 Annee: "2024"
 Lieu: La conception, Québec
 Photographe: Fred Tougas
+Photos:
+  - Photo:
+      - /photos/La Conception IV/photo-01.jpg
+    Carrousel: false
+  - Photo:
+      - /photos/La Conception IV/photo-02.jpg
+    Carrousel: false
 ---
