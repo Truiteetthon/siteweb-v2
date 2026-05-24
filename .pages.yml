@@ -11,17 +11,17 @@ content:
       - name: Titre
         label: Titre
         type: string
-      - name: Titre-an
-        label: Titre anglais
+      - name: Titre-anglais
+        label: Titre-anglais
         type: string
       - name: Description
         label: Description
         type: rich-text
-      - name: Description-an
-        label: Description anglais
+      - name: Description-anglais
+        label: Description-anglais
         type: rich-text
       - name: Annee
-        label: Année
+        label: Annee
         type: string
       - name: Lieu
         label: Lieu
