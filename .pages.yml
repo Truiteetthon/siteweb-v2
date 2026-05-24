@@ -17,7 +17,7 @@ content:
       - name: Categorie
         type: select
         options:
-          values: [Architecture, Installations, Contact]
+          values: [Architecture, Installations]
       - name: Description
         label: Description
         type: rich-text
