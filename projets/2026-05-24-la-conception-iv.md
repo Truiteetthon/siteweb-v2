@@ -28,10 +28,28 @@ Annee: "2024"
 Lieu: La conception, Québec
 Photographe: Fred Tougas
 Photos:
-  - Photo:
-      - /photos/La Conception IV/photo-01.jpg
+  - Photo: /photos/La Conception IV/photo-01.jpg
+    Carrousel: true
+  - Photo: /photos/La Conception IV/photo-02.jpg
     Carrousel: false
-  - Photo:
-      - /photos/La Conception IV/photo-02.jpg
+  - Photo: /photos/La Conception IV/photo-03.jpg
+    Carrousel: true
+  - Photo: /photos/La Conception IV/photo-04.jpg
     Carrousel: false
+  - Photo: /photos/La Conception IV/photo-05.jpg
+    Carrousel: false
+  - Photo: /photos/La Conception IV/photo-06.jpg
+    Carrousel: true
+  - Photo: /photos/La Conception IV/photo-07.jpg
+    Carrousel: true
+  - Photo: /photos/La Conception IV/photo-08.jpg
+    Carrousel: false
+  - Photo: /photos/La Conception IV/photo-09.jpg
+    Carrousel: false
+  - Photo: /photos/La Conception IV/photo-10.jpg
+    Carrousel: false
+  - Photo: /photos/La Conception IV/photo-11.jpg
+    Carrousel: false
+  - Photo: /photos/La Conception IV/photo-12.jpg
+    Carrousel: true
 ---
