@@ -1,21 +1,26 @@
 ---
 layout: head.vto
 ---
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Nicolas Chaudier architecte</title>
-        <link href="style.css" rel="stylesheet" type="text/css" />
-        <link
-            rel="shortcut icon"
-            type="image/jpg"
-            href="Photos\En Eaux Vives\photo-9.jpg"
-        />
-    </head>
+<div class="descriptionprojet">
+    <ins id="titre" style="font-weight: 450">{{ if lang === "en" }}{{ Titre_anglais }}{{ else }}{{ Titre }}{{ /if }}</ins>
+    <div class="space"></div>
+    <div class="description">
+        {{ if lang === "en" }}{{ Description_anglais }}{{ else }}{{ Description }}{{ /if }}
+    </div>
+    <div class="space"></div>
+    <div>{{ Lieu }}</div>
+    <div>{{ Annee }}</div>
+    <br />
+    <br />
+    <div>{{ if lang === "en" }}Photo{{ else }}Photo{{ /if }}: {{ Photographe }}</div>
+</div>
 
-  <body>
-
-  </body>
-</html>
+<main>
+    <ul class="listeprojet">
+        {{ for image of Photos }}
+        <li>
+            <img class="photosprojet" src="{{ image.Photo }}"/>
+        </li>
+        {{ /for }}
+    </ul>
+</main>

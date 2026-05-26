@@ -1,6 +1,6 @@
 ---
 Titre: En eaux vives
-Titre-anglais: Into rapids
+Titre_anglais: Into rapids
 Categorie: Installations
 Description: L’installation est une interprétation du poème composé par
   [@caroline.fortin.autrice](https://www.instagram.com/caroline.fortin.autrice/)
@@ -10,7 +10,7 @@ Description: L’installation est une interprétation du poème composé par
   symétrie de l’installation et l’aspect aérien confèrent un caractère immuable
   et sublime qui amplifie l’intensité du poème et interpelle la force
   majestueuse des chutes.
-Description-anglais: L’installation est une interprétation du poème composé par
+Description_anglais: L’installation est une interprétation du poème composé par
   [@caroline.fortin.autrice](https://www.instagram.com/caroline.fortin.autrice/)
   , inspiré par la splendeur du Parc des Chutes Monte-à-Peine-et-des-Dalles,
   ainsi que par les textes de la poétesse du 19e siècle Louise-Amélie Panet.

@@ -1,9 +1,9 @@
 ---
 Titre: À propos
-Titre-anglais: About
+Titre_anglais: About
 Description: Une pratique architecturale en toute humilité, qui a comme points
   d’intérêt l’atmosphère, l’essence et le savoir-faire.
-Description-anglais: Une pratique architecturale en toute humilité, qui a comme
+Description_anglais: Une pratique architecturale en toute humilité, qui a comme
   points d’intérêt l’atmosphère, l’essence et le savoir-faire.
 Courriel: nchaudi3r@gmail.com
 Telephone: +1 (514) 922-5056

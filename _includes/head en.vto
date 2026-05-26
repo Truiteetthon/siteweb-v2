@@ -12,7 +12,60 @@
         />
     </head>
 
-  <body>
+    <body>
+        <header class="header" id="header">
+            <a style="font-weight: 450" href="/index.html">Nicolas Chaudier architecte</a>
+            <div class="space"></div>
+            <div class="menu">
 
-  </body>
-</html>
+                <div class="categorie" onclick="toggleMenu(this)">Architecture</div>
+                <ul class="submenu">
+                    {{ for projets of search.pages("Categorie=Architecture").sort() }}
+                    <a href="{{projets.url}}">{{projets.Titre-anglais}}</a>
+                    {{ /for }}
+                </ul>
+                <div class="categorie" onclick="toggleMenu(this)">Installations</div>
+                <ul class="submenu">
+                    {{ for projets of search.pages("Categorie=Installations").sort() }}
+                    <a href="{{projets.url}}">{{projets.Titre-anglais}}</a>
+                    {{ /for }}
+                </ul>
+                {{ for contact of search.pages("Categorie=Contact").sort() }}
+                <a class="categorie" href="{{contact.url}}">Contact</a>
+                {{ /for }}
+            </div>
+            <script>
+                const menus = document.querySelectorAll('.submenu');
+
+                // Restaurer l'état au chargement
+                menus.forEach((ul, i) => {
+                    if (sessionStorage.getItem('menu-' + i) === 'open') {
+                        ul.classList.add('open');
+                    }
+                });
+
+                function toggleMenu(el) {
+                    const ul = el.nextElementSibling;
+                    const isOpen = ul.classList.contains('open');
+
+                    // Fermer tous
+                    menus.forEach((m, i) => {
+                        m.classList.remove('open');
+                        sessionStorage.setItem('menu-' + i, 'closed');
+                    });
+
+                    // Ouvrir celui cliqué si ce n'était pas déjà ouvert
+                    if (!isOpen) {
+                        ul.classList.add('open');
+                        const index = Array.from(menus).indexOf(ul);
+                        sessionStorage.setItem('menu-' + index, 'open');
+                    }
+                }
+            </script>
+        </header>
+        <div class="lang">
+            <a href="/fr/">Fr</a> / <a href="/en/">En</a>
+        </div>
+  {{content}}
+    </body>
+  </html>

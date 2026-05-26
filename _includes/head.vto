@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ lang }}">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Nicolas Chaudier architecte</title>
-        <link href="style.css" rel="stylesheet" type="text/css" />
+        <title>{{ if lang === "en" }}Nicolas Chaudier architect{{ else }}Nicolas Chaudier architecte{{ /if }}</title>
+        <link href="/style.css" rel="stylesheet" type="text/css" />
         <link
             rel="shortcut icon"
             type="image/jpg"
@@ -13,19 +13,57 @@
     </head>
   <body>
       <header class="header" id="header">
-          <div style="font-weight: 450">Nicolas Chaudier architecte</div>
+          <a style="font-weight: 450" href="{{ if lang === 'en' }}/en/{{ else }}/{{ /if }}">Nicolas Chaudier {{ if lang === "en" }}architect{{ else }}architecte{{ /if }}</a>
           <div class="space"></div>
           <div class="menu">
-              {{ for categorie of search.values("categorie").sort() }}
-              <div class="categorie" id={{ categorie }}>{{ categorie }}</div>
+
+              <div class="categorie" onclick="toggleMenu(this)">Architecture</div>
+              <ul class="submenu">
+                  {{ for projets of search.pages("Categorie=Architecture lang=" + lang).sort() }}
+                  <a href="{{ projets.url }}">{{ if lang === "en" }}{{ projets["Titre_anglais"] }}{{ else }}{{ projets.Titre }}{{ /if }}</a>
+                  {{ /for }}
+              </ul>
+              <div class="categorie" onclick="toggleMenu(this)">Installations</div>
+              <ul class="submenu">
+                  {{ for projets of search.pages("Categorie=Installations lang=" + lang).sort() }}
+                  <a href="{{ projets.url }}">{{ if lang === "en" }}{{ projets["Titre_anglais"] }}{{ else }}{{ projets.Titre }}{{ /if }}</a>
+                  {{ /for }}
+              </ul>
+              {{ for contact of search.pages("Categorie=Contact lang=" + lang).sort() }}
+              <a class="categorie" href="{{ contact.url }}">Contact</a>
               {{ /for }}
           </div>
-          <div class="space"></div>
-          <div class="space"></div>
-          <div>+1 (514) 922-5056</div>
-          <div>
-              <a class="mail" href="mailto:nchaudi3r@gmail.com">courriel</a>
-          </div>
+          <script>
+              const menus = document.querySelectorAll('.submenu');
+
+              menus.forEach((ul, i) => {
+                  if (sessionStorage.getItem('menu-' + i) === 'open') {
+                      ul.classList.add('open');
+                  }
+              });
+
+              function toggleMenu(el) {
+                  const ul = el.nextElementSibling;
+                  const isOpen = ul.classList.contains('open');
+                  menus.forEach((m, i) => {
+                      m.classList.remove('open');
+                      sessionStorage.setItem('menu-' + i, 'closed');
+                  });
+                  if (!isOpen) {
+                      ul.classList.add('open');
+                      const index = Array.from(menus).indexOf(ul);
+                      sessionStorage.setItem('menu-' + index, 'open');
+                  }
+              }
+          </script>
       </header>
+      <div class="lang">
+
+              {{ set frUrl = alternates[0]?.url || "/" }}
+              {{ set enUrl = alternates[1]?.url || "/en/" }}
+              <a href="{{ frUrl }}">Fr</a> / <a href="{{ enUrl }}">En</a>
+
+      </div>
+{{ content }}
   </body>
 </html>

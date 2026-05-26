@@ -2,21 +2,36 @@
 layout: head.vto
 ---
 
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Nicolas Chaudier architecte</title>
-        <link href="style.css" rel="stylesheet" type="text/css" />
-        <link
-            rel="shortcut icon"
-            type="image/jpg"
-            href="Photos\En Eaux Vives\photo-9.jpg"
-        />
-    </head>
 
-  <body>
+      <main>
+          <div class="hidden" id="unzoom">&nbsp;×</div>
 
-  </body>
-</html>
+          {{ set carrouselPhotos = [] }}
+          {{ for projet of search.pages("Categorie!=undefined") }}
+            {{ for item of projet.Photos }}
+              {{ if item.Carrousel }}
+                {{ set carrouselPhotos = carrouselPhotos |> concat([{ src: item.Photo, projet: projet.Titre }]) }}
+              {{ /if }}
+            {{ /for }}
+          {{ /for }}
+
+          {{ for photo of carrouselPhotos }}
+            <img
+                class="carrousel"
+                src="{{ photo.src }}"
+                data-projet="{{ photo.projet }}"
+            />
+          {{ /for }}
+
+      </main>
+      <script>
+          const images = document.querySelectorAll('img.carrousel');
+          let current = 0;
+          images[0].classList.add('active');
+
+          setInterval(() => {
+              images[current].classList.remove('active');
+              current = (current + 1) % images.length;
+              images[current].classList.add('active');
+          }, 10000);
+      </script>

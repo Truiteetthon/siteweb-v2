@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Nicolas Chaudier architecte</title>
+        <link href="/style.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" type="image/jpg" href="/Photos/En Eaux Vives/photo-9.jpg">
+    <link rel="alternate" hreflang="fr" href="http://localhost:3000/projets/2026-05-24-en-eaux-vives/">
+<link rel="alternate" hreflang="en" href="http://localhost:3000/en/projets/2026-05-24-en-eaux-vives/">
+</head>
+  <body>
+      <header class="header" id="header">
+          <a style="font-weight: 450" href="/">Nicolas Chaudier architecte</a>
+          <div class="space"></div>
+          <div class="menu">
+
+              <div class="categorie" onclick="toggleMenu(this)">Architecture</div>
+              <ul class="submenu">
+                  <a href="/projets/2026-05-24-la-conception-iv/">La conception IV</a>
+              </ul>
+              <div class="categorie" onclick="toggleMenu(this)">Installations</div>
+              <ul class="submenu">
+                  <a href="/projets/2026-05-24-en-eaux-vives/">En eaux vives</a>
+              </ul>
+              <a class="categorie" href="/contact/Contact/">Contact</a>
+          </div>
+          <script>
+              const menus = document.querySelectorAll('.submenu');
+
+              menus.forEach((ul, i) => {
+                  if (sessionStorage.getItem('menu-' + i) === 'open') {
+                      ul.classList.add('open');
+                  }
+              });
+
+              function toggleMenu(el) {
+                  const ul = el.nextElementSibling;
+                  const isOpen = ul.classList.contains('open');
+                  menus.forEach((m, i) => {
+                      m.classList.remove('open');
+                      sessionStorage.setItem('menu-' + i, 'closed');
+                  });
+                  if (!isOpen) {
+                      ul.classList.add('open');
+                      const index = Array.from(menus).indexOf(ul);
+                      sessionStorage.setItem('menu-' + index, 'open');
+                  }
+              }
+          </script>
+      </header>
+      <div class="lang">
+
+              <a href="/projets/2026-05-24-en-eaux-vives/">Fr</a> / <a href="/en/projets/2026-05-24-en-eaux-vives/">En</a>
+
+      </div>
+<div class="descriptionprojet">
+    <ins id="titre" style="font-weight: 450">En eaux vives</ins>
+    <div class="space"></div>
+    <div class="description">
+L’installation est une interprétation du poème composé par [@caroline.fortin.autrice](https://www.instagram.com/caroline.fortin.autrice/) , inspiré par la splendeur du Parc des Chutes Monte-à-Peine-et-des-Dalles, ainsi que par les textes de la poétesse du 19e siècle Louise-Amélie Panet. L’eau recueilli dans les dalles de bois brûlé, le silence qui marque la symétrie de l’installation et l’aspect aérien confèrent un caractère immuable et sublime qui amplifie l’intensité du poème et interpelle la force majestueuse des chutes.    </div>
+    <div class="space"></div>
+    <div>Parc des Chutes Monte-à-Peine-et-des-Dalles, Sainte-Mélanie, Québec.</div>
+    <div>2022</div>
+    <br>
+    <br>
+    <div>Photo: Fred Tougas</div>
+</div>
+
+<main>
+    <ul class="listeprojet">
+        <li>
+            <img class="photosprojet" src="/photos/En Eaux Vives/photo-1.jpg">
+        </li>
+        <li>
+            <img class="photosprojet" src="/photos/En Eaux Vives/photo-2.jpg">
+        </li>
+        <li>
+            <img class="photosprojet" src="/photos/En Eaux Vives/photo-3.jpg">
+        </li>
+        <li>
+            <img class="photosprojet" src="/photos/En Eaux Vives/photo-4.jpg">
+        </li>
+        <li>
+            <img class="photosprojet" src="/photos/En Eaux Vives/photo-5.jpg">
+        </li>
+        <li>
+            <img class="photosprojet" src="/photos/En Eaux Vives/photo-x2.jpg">
+        </li>
+        <li>
+            <img class="photosprojet" src="/photos/En Eaux Vives/photo-x3.jpg">
+        </li>
+        <li>
+            <img class="photosprojet" src="/photos/En Eaux Vives/photo-x4.jpg">
+        </li>
+        <li>
+            <img class="photosprojet" src="/photos/En Eaux Vives/photo-x5.jpg">
+        </li>
+    </ul>
+</main>
+
+  
+
+</body></html>
