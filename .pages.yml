@@ -11,8 +11,8 @@ content:
       - name: Titre
         label: Titre
         type: string
-      - name: Titre-anglais
-        label: Titre-anglais
+      - name: Titre_anglais
+        label: Titre_anglais
         type: string
       - name: Categorie
         type: select
@@ -21,8 +21,8 @@ content:
       - name: Description
         label: Description
         type: rich-text
-      - name: Description-anglais
-        label: Description-anglais
+      - name: Description_anglais
+        label: Description_anglais
         type: rich-text
       - name: Annee
         label: Annee
@@ -53,14 +53,14 @@ content:
       - name: Titre
         label: Titre
         type: string
-      - name: Titre-anglais
-        label: Titre-anglais
+      - name: Titre_anglais
+        label: Titre_anglais
         type: string
       - name: Description
         label: Description
         type: rich-text
-      - name: Description-anglais
-        label: Description-anglais
+      - name: Description_anglais
+        label: Description_anglais
         type: rich-text
       - name: Courriel
         label: Courriel
@@ -74,4 +74,3 @@ content:
       - name: Photos
         label: Photos
         type: image
-        
