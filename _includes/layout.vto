@@ -19,7 +19,7 @@ layout: head.vto
     <ul class="listeprojet">
         {{ for image of Photos }}
         <li>
-            <img class="photosprojet" src="{{ image.Photo }}"/>
+            <img class="photosprojet" src="{{ image.Photo }}" loading="lazy"/>
         </li>
         {{ /for }}
     </ul>

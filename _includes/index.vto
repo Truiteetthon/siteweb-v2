@@ -20,6 +20,7 @@ layout: head.vto
                 class="carrousel"
                 src="{{ photo.src }}"
                 data-projet="{{ photo.projet }}"
+                loading="{{ @index === 0 ? 'eager' : 'lazy' }}"
             />
           {{ /for }}
 
