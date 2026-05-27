@@ -1,9 +1,7 @@
 import lume from "lume/mod.ts";
 import multilanguage from "lume/plugins/multilanguage.ts";
 
-const site = lume({
-  location: new URL("https://truiteetthon.github.io/siteweb-v2/"),
-});
+const site = lume();
 
 site.use(
   multilanguage({
