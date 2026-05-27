@@ -15,13 +15,14 @@ layout: head.vto
             {{ /for }}
           {{ /for }}
 
+          {{ set isFirst = true }}
           {{ for photo of carrouselPhotos }}
-            <img
-                class="carrousel"
-                src="{{ photo.src }}"
-                data-projet="{{ photo.projet }}"
-                loading="{{ @index === 0 ? 'eager' : 'lazy' }}"
-            />
+          <img
+              class="carrousel"
+              src="{{ photo.src }}"
+              loading="{{ isFirst ? 'eager' : 'lazy' }}"
+          />
+          {{ set isFirst = false }}
           {{ /for }}
 
       </main>
