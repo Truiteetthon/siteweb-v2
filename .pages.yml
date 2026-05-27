@@ -7,6 +7,7 @@ content:
     label: Projets
     type: collection
     path: projets
+    filename: "{primary}.md"
     fields:
       - name: Titre
         label: Titre
