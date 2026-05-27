@@ -47,8 +47,8 @@ content:
 
   - name: contact
     label: Contact
-    type: file
-    path: Contact
+    type: collection
+    path: contact
     fields:
       - name: Titre
         label: Titre
