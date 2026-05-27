@@ -1,5 +1,5 @@
 media:
-  input: Photos
+  input: photos
   output: /photos
 
 content:
