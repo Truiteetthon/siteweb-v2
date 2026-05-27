@@ -14,7 +14,7 @@ site.add("style.css");
 
 site.add("script.js");
 
-site.add("Photos");
+site.add("photos");
 
 site.add("projets");
 
