@@ -1,6 +1,6 @@
 ---
 Titre: En eaux vives
-Titre_anglais: Into rapids
+Titre_anglais: En eaux vives
 Categorie: Installations
 Description: L’installation est une interprétation du poème composé par
   [@caroline.fortin.autrice](https://www.instagram.com/caroline.fortin.autrice/)
