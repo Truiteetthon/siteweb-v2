@@ -1,6 +1,6 @@
 ---
 Titre: La conception IV
-Titre_anglais: La conception IV
+Titre_anglais: La Conception IV
 Categorie: Architecture
 Description: La Conception IV is a minimalist cabin located in La Conception,
   Québec, Canada, designed by ++[Nicolas Chaudier
