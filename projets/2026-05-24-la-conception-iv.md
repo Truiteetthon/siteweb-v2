@@ -1,5 +1,5 @@
 ---
-Titre: La conception IV
+Titre: La Conception IV
 Titre_anglais: La Conception IV
 Categorie: Architecture
 Description: La Conception IV is a minimalist cabin located in La Conception,
