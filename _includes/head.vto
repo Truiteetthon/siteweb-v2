@@ -21,13 +21,13 @@
               <div class="categorie" onclick="toggleMenu(this)">Architecture</div>
               <ul class="submenu">
                   {{ for projets of search.pages("Categorie=Architecture lang=" + lang).sort() }}
-                  <a href="{{ projets.url }}">{{ if lang === "en" }}{{ projets["Titre_anglais"] }}{{ else }}{{ projets.Titre }}{{ /if }}</a>
+                  <a href="{{ projets.url }}">{{ if lang === "en" }}{{ projets["Titre_anglais"] }}{{ else }}{{ projets.Titre }}{{ /if }}</a><br>
                   {{ /for }}
               </ul>
               <div class="categorie" onclick="toggleMenu(this)">Installations</div>
               <ul class="submenu">
                   {{ for projets of search.pages("Categorie=Installations lang=" + lang).sort() }}
-                  <a href="{{ projets.url }}">{{ if lang === "en" }}{{ projets["Titre_anglais"] }}{{ else }}{{ projets.Titre }}{{ /if }}</a>
+                  <a href="{{ projets.url }}">{{ if lang === "en" }}{{ projets["Titre_anglais"] }}{{ else }}{{ projets.Titre }}{{ /if }}</a><br>
                   {{ /for }}
               </ul>
               {{ for contact of search.pages("Categorie=Contact lang=" + lang).sort() }}
